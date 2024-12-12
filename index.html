@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #weather-display {
+            text-align: center;
+            background-color: black; /* Arrière-plan noir */
+            color: white; /* Texte en blanc */
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10%; /* Vous pouvez ajuster en fonction de votre mise en page */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Ajustez selon la taille que vous souhaitez pour le bloc */
+        }
+
+        #back-button {
+            margin-top: 20px; /* Marge pour espacer le bouton de la température */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="weather-app">
+        <!-- En-tête -->
+        <header>
+            <div id="logo-container"></div>
+            <div id="weather-banner" class="weather-banner"></div>
+        </header>
+
+        <!-- Zone de recherche -->
+        <div id="controls">
+            <input type="text" id="city-input" placeholder="Entrez une ville">
+            <button id="search-button">Obtenir la météo</button>
+            <div id="suggestions"></div>
+        </div>
+
+        <!-- Affichage de la météo -->
+        <div id="weather-display">
+            <div id="weather-content"></div>
+            <button id="back-button" style="display: none;">Retour sur la carte</button>
+        </div>
+
+        <!-- La carte Leaflet -->
+        <div id="map"></div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Talbi Adil - Resurgences</p>
+        </footer>
+    </div>
+
+    <video id="background-video" autoplay loop muted>
+        <source id="video-source" src="" type="video/mp4">
+    </video>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

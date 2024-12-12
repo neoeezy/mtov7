@@ -1,0 +1,92 @@
+.leaflet-container {
+    overflow: hidden;
+    background: #ddd;
+    outline: 0;
+    position: relative;
+}
+
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container img,
+.leaflet-pane > svg path,
+.leaflet-pane > canvas path {
+    pointer-events: none;
+}
+
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    display: block;
+}
+
+.leaflet-container a {
+    cursor: pointer;
+}
+
+.leaflet-control-attribution,
+.leaflet-control-scale {
+    font-size: 11px;
+    color: #333;
+}
+
+.leaflet-control-attribution a,
+.leaflet-popup-content a {
+    color: #0078A8;
+}
+
+.leaflet-control-attribution a:hover {
+    color: #004C70;
+}
+
+.leaflet-left {
+    left: 0;
+}
+
+.leaflet-right {
+    right: 0;
+}
+
+.leaflet-top {
+    top: 0;
+}
+
+.leaflet-bottom {
+    bottom: 0;
+}
+
+/* Customize these styles as necessary */
+.leaflet-popup-content-wrapper {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.leaflet-popup-tip-container {
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+}
+
+.leaflet-popup-close-button {
+    color: #000;
+    font: 16px Arial, sans-serif;
+    line-height: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.leaflet-control {
+    position: relative;
+    zoom: 1;
+    text-align: left;
+    pointer-events: visiblePainted;
+}
+
+.leaflet-control-attribution {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding: 0 5px;
+    overflow: hidden;
+    border-radius: 0 0 0 3px;
+}
